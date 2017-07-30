@@ -22,6 +22,15 @@ xelatex master.tex
 xelatex master.tex
 ```
 
+Für die Beethoven-Arbeit müssen zuvor noch die LilyPond-Beispiele
+kompiliert werden:
+
+```
+cd nbs
+lilypond 1-motivik.ly 2-var-d-moll.ly 3-parallelen-zu-op-61.ly
+cd ..
+```
+
 ## Danksagung
 
 Herzlicher Dank ergeht an alle, die TeXLive und die zugehörige
