@@ -1,0 +1,659 @@
+\documentclass[a4paper,11pt,twoside]{scrartcl}
+
+\usepackage{verbatim}
+\usepackage[quiet]{polyglossia}
+\usepackage[autostyle,german=guillemets,french=guillemets,maxlevel=4]{csquotes}
+\usepackage{fontspec}
+\usepackage{lilyglyphs}
+\usepackage{textcomp}
+\usepackage[
+	backend=biber,
+	style=footnote-dw,
+%% biblatex-dw-Optionen %%%
+%	acronyms=true,
+%	addyear=true,
+	annotation=true,
+%	citeauthor=normalfont,%namefontfoot,%namefont,
+%	citedas=false,
+%	citepages=suppress,%omit,%permit,%separate,
+%	edbyidem=false,
+%	editorstring=normal,%brackets,
+%	edstringincitations=false,
+%	edsuper=true,
+%	firstfull=true,
+%	firstfullname=true,
+%	firstnamefont=smallcaps,%italic,%bold,
+%	ibidemfont=smallcaps,%italic,%bold,
+%	idembib=false,
+%	idembibformat=dash,
+%	idemfont=smallcaps,%italic,%bold,
+%	inreference=full,%normal,
+%	journalnumber=afteryear,%date,%standard
+	library=true,
+%	namefont=smallcaps,%italic,%bold,
+%	nolocation=true,
+%	nopublisher=false,
+%	oldauthor=false,
+%	omiteditor=true,
+%	origfields=false,
+%	origfieldsformat=parens,%brackets,%punct,
+%	pagetotal=true,
+%	pseudoauthor=false,
+%	series=afteryear,
+%	shorthandibid=false,
+%	shorthandinbib=true,
+%	shorthandwidth=40pt,%3em,
+%	shortjournal=true,
+%	terselos=false,
+%	xref=true,
+%% biblatex-Optionen %%%
+%	autocite=plain,
+%	citetracker=false,
+%	doi=true,
+%	eprint=true,
+%	ibidpage=true,
+%	ibidtracker=false,
+%	idemtracker=false,
+%	isbn=true,
+%	pagetracker=false,
+	hyperref
+]{biblatex}
+\usepackage[hidelinks]{hyperref}
+\usepackage[verbose=silent]{microtype}
+\usepackage{rotating}
+
+%% bessere Querverweise %%%%%%%%%%%%%%%%
+\usepackage{varioref}
+% siehe Packetdoku S. 14
+\def\reftextfaceafter {auf der \reftextvario
+{gegenüberliegenden}{gegenüberliegenden} Seite}%
+\def\reftextfacebefore {auf der \reftextvario
+{gegenüberliegenden}{gegenüberliegenden} Seite}%
+\def\reftextafter
+{auf der \reftextvario
+{nächsten}{folgenden} Seite}%
+\def\reftextbefore
+{auf der \reftextvario
+{vorigen}{vorhergehenden} Seite}%
+\def\reftextcurrent
+{\reftextvario
+{auf dieser}{diese} Seite}%
+
+%% Abkürzungen
+\newcommand{\Ar}{\textrightarrow}
+\newcommand{\Nr}[1]{\textmd{\textit{Nr.~#1}}}
+
+%% Formatierung subsubsection header %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setkomafont{subsubsection}{\rmfamily\raggedleft}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliography{quellen}
+
+\setdefaultlanguage{german}
+\setotherlanguage[variant=ancient]{greek}
+\newfontfamily\greekfont{CMUSerif-Roman}
+\setotherlanguage[variant=british]{english}
+
+\title{Prophet, Lehrer, Freund, Beter}
+\subtitle{Die Darstellung Jesu\\in den Rezitativen der Matthäuspassion von Seb. Bach}
+\author{Simon Albrecht}
+
+\begin{document}
+\maketitle
+
+Johann Sebastian Bach’s Matthäuspassion und ihr Libretto von
+Christian Friedrich Henrici befinden sich in einem Spannungsfeld
+von orthodox-dogmatischer Predigt und affektbetonter, mitunter
+theatralischer Darstellung.  Im Text finden sich allenthalben
+Verweise auf Autoren wie David Hollatz, Johann Gerhard und Leonhard
+Hütter, genauso aber Zitate wie \enquote{Ich will dir mein Herze
+schenken} oder \enquote{Ich will Jesum selbst begraben}, an denen
+die emotionale Beteiligung des gedachten Hörers ablesbar wird.  Dies
+betrifft zum einen die madrigalische Dichtung Henrici’s, zum anderen
+ist aber auch in der biblischen Überlieferung selbst die Person Jesu
+Christi mehrschichtig: Manche seiner Worte sind in göttlicher oder
+prophetischer Kapazität gesprochen, andere sind Worte eines Lehrers
+oder Freundes zu seinen Jüngern, und dann hören wir zunehmend den
+Menschen Jesus, der in äußerstem Leiden zu Gott betet.  Im Folgenden
+soll genauer untersucht werden, wie sich diese Facetten in der
+Portraitierung Jesu Christi in den Rezitativen niederschlagen und
+welches Licht die musikalische Darstellung darauf wirft.
+
+\section{Die Rollen Jesu im Passionsbericht nach Matthäus}
+
+\subsection{Überblick}
+
+Die biblische Textgrundlage für die Matthäuspassion besteht in den
+Kapiteln 26 und 27 des Evangeliums.  Darin eingeschlossen sind insgesamt
+22 Worte Jesu\footnote{Von diesen zählt nur das letzte (\enquote{Eli,
+Eli}) zu den \enquote{Sieben Worten Jesu am Kreuz}, deren restliche sechs
+sind den anderen Evangelien entnommen.}.  An der zeitlichen
+Dichte dieser Worte lässt sich eine deutliche Zweiteilung ablesen,
+die mit den zwei Teilen der Vertonung zusammenfällt: Mit den Worten
+\enquote{Aber das ist alles geschehen, dass erfüllt würden die Schriften
+der Propheten} (Mt 26,56 – Nr. 28, T.25\,ff.) gibt Jesus das Heft
+des Handelns aus der Hand, unterwirft sich dem Leiden, und ergreift
+danach bis zum Tod am Kreuz nur noch dreimal das Wort, während die
+19~Christusworte im ersten Teil recht dicht gesät sind.  Tabelle
+\vref{tab:overview} gibt einen Überblick.
+
+\begin{sidewaystable}
+ \centering
+ \caption{Übersicht über die Jesusworte in der Matthäuspassion}
+ \begin{tabular}{r@{}l|r@{}l|l|l|l}
+  \multicolumn{2}{l}{Nr.\footnote{Nummerierung nach NBA.}} &\multicolumn{2}{l}{Vers (Mt)} &Tonarten &Textanfang &Rolle(n) \\
+  \hline
+  2  &   &26, &2       &G\Ar{}h       &\enquote{Ihr wisset, dass nach zweien…} &Prophet (aber affektives „gekreuziget“!) \\
+  4  &e. &    &10b–13  &F–g–d–a–e     &\enquote{Was bekümmert ihr das Weib?}   &Lehrer, Prophet \\
+  9  &c. &    &18      &G\Ar{}e       &\enquote{Gehet hin in die Stadt}        &Lehrer \\
+     &   &    &21b     &Es\Ar{}c      &\enquote{Wahrlich, ich sage euch: Einer unter euch} &Prophet \\
+  11 &   &    &23b–24  &f\Ar{}Es      &\enquote{Der mit der Hand}              &Prophet (einschließlich des \enquote{Wehe!}) \\
+     &   &    &25b     &g             &\enquote{Du sagests.}                   &Prophet \\
+     &   &    &26b     &F             &\enquote{Nehmet, esset}                 &Prophet?, Lehrer \\
+     &   &    &27b–29  &C\Ar{}G       &\enquote{Trinket alle daraus}           &Prophet, (Lehrer) \\
+  14 &   &    &31b.32  &(A)fis\Ar{}E  &\enquote{In dieser Nacht werdet ihr}    &Prophet, (Lehrer) \\
+  16 &   &    &34b     &D\Ar{}e       &\enquote{Wahrlich, ich sage dir: In dieser Nacht} &Prophet \\
+  18 &   &    &36b     &B\Ar{}Es      &\enquote{Setzet euch hie}               &Freund \\
+     &   &    &38b     &c\Ar{}As      &\enquote{Meine Seele ist betrübt}       &Freund \\
+  21 &   &    &39b     &Es\Ar{}g      &\enquote{Mein Vater, ists möglich}      &Beter \\
+  24 &   &    &40b.41  &F\Ar{}g\Ar{}a &\enquote{Könnet ihr denn nicht…}        &Freund, Lehrer \\
+     &   &    &42b     &e\Ar{}h       &\enquote{Mein Vater, ists nicht möglich}&Beter \\
+  26 &   &    &45b.46  &fis\Ar{}gis   &\enquote{Ach, wollt ihr nun schlafen}   &Freund, Prophet \\
+     &   &    &50a     &D             &\enquote{Mein Freund, warum bist du kommen?} &(\enquote*{Über}-)Freund \\
+  28 &   &    &52–54   &A\Ar{}fis     &\enquote{Stecke dein Schwert an seinen Ort} &Lehrer, Prophet \\
+     &   &    &55b–56a &h–cis–E–A     &\enquote{Ihr seid ausgegangen}          &Lehrer, (Prophet) \\
+  \hline
+  36 &a. &    &64      &h\Ar{}e       &\enquote{Du sagests. … Von nun an wirds geschehen} &Prophet \\
+  43 &   &27, &11b     &c             &\enquote{Du sagests.}                   &Prophet \\
+  61 &a. &    &46b     &b             &\enquote{Eli, Eli}                      &Beter
+ \end{tabular}
+ \label{tab:overview}
+\end{sidewaystable}
+
+Wenn sich die Rollen natürlich nicht immer voneinander trennen lassen,
+so sieht man doch, dass die Rolle des Propheten deutlich den meisten Raum
+einnimmt, mit 14 Nennungen, gefolgt von der des Lehrers, mit 7
+Nennungen.  Ganz anders die Geth\-se\-ma\-ne-Sze\-ne, in der Jesus vor
+allem als Freund und als Beter auftritt.
+
+In der Rolle des Propheten äußert sich am meisten nur göttliche Natur;
+gewissermaßen von einer höheren Warte gesprochen, sind diese Worte kaum
+affektiv geprägt und der menschlichen Logik enthoben.  Als Lehrer oder
+Rabbi sind Jesu Worte bereits mehr in menschlichen Beziehungen verwurzelt,
+zugleich aber durch formale Autorität gestützt.  Diese Formalität spielt
+in der Geth\-se\-ma\-ne-Sze\-ne keine Rolle, wo Jesus seinen Freunden
+die Bedrängnis seines Herzens offenbart und um ihren Beistand bittet.  Zuletzt
+in der Rolle des Beters ist Jesus am Tiefpunkt des menschlichen Daseins
+angekommen, wo er mit seinem Schicksal hadert und am Ende seine Gottverlassenheit
+beklagt.
+
+\subsection{Einzelbetrachtungen}
+Das erste Jesuswort ist eine prophetische Ankündigung; es geht zwar um
+sein eigenes künftiges Leiden, aber Jesus spricht in der dritten Person
+und ohne persönliche Betroffenheit.
+
+Das zweite Wort, \enquote{Was bekümmert ihr das Weib?}, ist ein gutes
+Beispiel, wie die Rollen ineinander übergehen: Die ersten beiden Verse
+sind ganz im Stil der früheren Lehrtätigkeit Jesu gehalten, dann aber
+weitet er den Blick mit den zunehmend prophetischen Worten, die auf
+die kommende Leidensgeschichte sowie die künftige Wirkung des
+Evangeliums verweisen.
+
+Bei dem Wort: \enquote{Der mit der Hand mit mir in die Schüssel tauchet,
+der wird mich verraten} \&c. ist aufschlussreich zu beobachten, dass es
+sich um ein prophetisches Wort handelt, denn damit ist das \enquote{wehe}
+an den Verräter keine persönliche Drohung, sondern eine Verkündung
+göttlichen Ratschlusses, welche Empathie von Jesus zulässt.
+
+Bei der Einsetzung des Abendmahles durchdringen sich eine alltägliche
+Situation, in der der Rabbi das Dankgebet spricht, seinen Jüngern das
+Brot bricht und den Kelch reicht, sowie die Einsetzung des Abendmahles
+als Ritus, in dem Leib und Blut Christi gegenwärtig sind\footnote{Kann
+man hier womöglich von einer priesterlichen Rolle Jesu sprechen?}, und
+zuletzt die Prophetie der neuen Gemeinschaft im Reich Gottes.
+
+Eine merkliche Dramatisierung zeigt bereits der Text, als Jesus in
+Gethsemane zum dritten Mal vom Gebet zurück zu seinen Jüngern kommt:
+zunächst setzt er mit gesteigertem Affekt (\enquote{Ach}, V.~45) die
+freundschaftliche Anrede von zuvor fort, dann folgt unvermittelt der
+Sprung ins Prophetische: \enquote{Siehe, die Stunde ist da}.
+
+Das direkt folgende Wort \enquote{Mein Freund, warum bist du kommen?}
+ist ein weiterer Sonderfall. Oberflächlich ist es von Jesus als Freund
+gesprochen und lädt den Verräter mit offenen Armen zur Umkehr ein,
+besonders in Luther’s originaler Textfassung, die Bach vertont.  Der
+griechische Urtext\footnote{zitiert nach \cite{nestle-aland}}
+\foreignquote{greek}{ἑταῖ\-ρε, ἐφ’ ὃ πάρ\-ει} ist aber sowohl mit Punkt als
+auch mit Fragezeichen überliefert, und viele Übersetzungen klingen
+deutlich konfrontativer: \enquote{Amice, ad quod venisti!} (Vulgata),
+\enquote{Freund, dazu bist du gekommen!} (Zürcher Bibel\cite{zuercher}),
+und auch die 1984’er Revision der Luther-Bibel: \enquote{Mein Freund,
+dazu bist du gekommen?}.  Von einem menschlichen Standpunkt her ist
+die so interpretierte Reaktion wesentlich leichter nachzuvollziehen:
+\enquote{Du bist doch nicht deswegen hergekommen!}, \enquote{Ich weiß
+doch, dass du mich verraten hast!}.
+
+Es folgen im zweiten Teil zwei Worte, die Jesus in der Vernehmung vor
+Pilatus sagt, und in denen er bestätigt, der Christus und der König
+der Juden zu sein.  Aus der sonstigen Wortkargheit Jesu in dieser
+Szene sticht besonders hervor die Prophezeiung \enquote{Von nun an
+werdet ihr sehen des Menschen Sohn sitzen zur Rechten der Kraft und
+kommen in den Wolken des Himmels}, die auch inhaltlich aus dem
+Gesprächskontext herausgelöst erscheint.  In dieser Situation agiert
+Jesus ganz aus menschlichen Zwängen herausgehoben, wie entrückt.
+
+Zuletzt das \enquote{Eli, Eli} ist das genaue Gegenteil.  Zwar nimmt
+es als hebräisches Zitat aus Psalm~22 eine herausragende Stellung im
+Text ein, aber hier spricht Jesus ganz als Mensch, den irdischen
+Bedingungen völlig unterworfen.
+
+\section{Die musikalische Umsetzung der Jesusworte}
+
+\subsection{Kompositorische Grundstruktur}
+Wie in allen oratorischen Werken Bach’s sind auch hier die Jesusworte
+gegenüber dem Rest des Evangelientextes durch die Begleitung mit
+Streichern ausgezeichnet.  Auf einer untersten Ebene handelt es sich
+hierbei um die akkordische Aussetzung des Generalbasses, die aber
+durchgehend als kunstvoller fünfstimmiger (unter Einbeziehung der
+Singstimme) Satz gearbeitet ist, bis dahin, dass immer wieder
+wichtige Akkordtöne in der Singstimme liegend von keinem der (obligaten)
+Instrumente verdoppelt werden.  Außerdem wird die Bewegung der Streicher
+oft (über das harmonische Tempo hinaus) diminuiert und zur affektmäßigen
+Ausdeutung genutzt; dies vor allem zu Ende der Worte/Sätze und auffällig
+oft auch mit dem Versschluss in eins fallend (z.B. Nr.~4e., T.~43\,f. oder
+Nr.~28, T.~9).  In gewisser Weise ist dies ein Zwischentyp zwischen
+\enquote*{secco}-~und \enquote*{accompagnato}-Rezitativ.
+
+Die Singstimme selbst ist, wie Konrad Küster\cite{kuester} beschreibt,
+in Anlehnung an ein Rezitationsmodell gestaltet, das sich ebenfalls
+an der Versstruktur orientiert.  Dabei werden zwei verschiedene
+Eingangsfloskeln – ein Sextakkord abwärts und ein Quartsextakkord
+aufwärts\footnote{Exemplarisch dafür jeweils der erste Einsatz des
+Evangelisten beziehungsweise Jesu.} – in vielfältiger Weise an die
+Anforderungen der Deklamation sowie an geforderte/erwünschte Lagen
+angepasst.
+
+Die Einsetzungsworte des Abendmahls in Nr.~11 gestaltet Bach im Grunde
+als eigene geschlossene Nummern, als Ariosi.  In verschiedenen
+Abstufungen ist diese Tendenz auch bei anderen Worten zu beobachten:
+zum Beispiel bei \enquote{Eli, Eli}, mit \textit{adagio} markiert, oder
+\enquote{Meine Seele ist betrübt} (Nr.~18, T.~11\,ff.), wo das Bogenvibrato
+des folgenden Recitativo accompagnato bereits vorweggenommen wird.  Auch
+das \textit{vivace} und \textit{moderato} in Nr.~14 ab T.~8 fällt aus
+dem üblichen Gestus heraus, indem sich das alttestamentarische Zitat
+als \enquote{echtes} Accompagnato herausbildet.
+
+\subsection{Einzelbetrachtungen}
+\subsubsection*{\Nr{2} \enquote{Ihr wisset, daß nach zweien Tagen Ostern wird}}
+Nach den harmonischen Turbulenzen und dem sehr ernsthaften e-moll des
+monumentalen Eingangschores setzt Bach den Beginn des Evangelienberichts
+in G-Dur deutlich dagegen ab.  Auch ist das typische harmonische
+Modell über einem absteigenden Bass (exemplarisch verwirklicht
+in Nr.~9a) hier zunächst maximal ausgedehnt, indem erst nach fast drei
+Takten des Jesuswortes die zweite Bassnote folgt.  Die anstehende
+Festlichkeit des Passa wird durch leuchtendes A-Dur gezeichnet, was
+auch die Deutlichkeit des dramatischen Reliefs erhöht: den
+Wendepunkt markiert Bach mit der hyperbolischen Verzierung auf
+\enquote{\underline{ü}berantwortet werden}, bevor \enquote{daß er
+gekreuziget werde} mit schmerzlicher Melodik und Harmonik untermalt
+wird und nach h-moll moduliert.  Im Einzelnen sind es der passus
+duriusculus, viele Vorhaltbildungen und der relativ eindeutige Chiasmus
+in der Sechzehntelfigur a-fis-g-e, die als Figuren eingesetzt sind.
+
+Bach fügt also dem prophetischen Wort eine expressive Ebene hinzu,
+die im Text nicht angelegt ist; die Klage ist mehr die Klage des
+Betrachters als die Jesu selbst.
+
+\subsubsection*{\Nr{4e.} \enquote{Was bekümmert ihr das Weib?}}
+Auch im folgenden Wort sind Affekte eingeführt, die als Jesu eigene
+zu betrachten im Bibeltext kein Anlass besteht.  Wo Jesus als Lehrer
+und Prophet spricht, gibt Bach’s Musikalisierung eine große Bildhaftigkeit
+und Empathie hinzu, so mit der \enquote{wehklagenden}\cite[2.~Theil,
+1.~Abtheilung, S.~104]{kirnberger} verminderten Septime auf
+\enquote{\underline{Ar}men} und mit den fallenden Seufzern beim
+Verweis auf Jesu Begräbnis.
+
+Die Tonartenwahl passt hier hervorragend zu den Beschreibungen
+von Johann Mattheson\cite[S.~236–252]{mattheson}, der F-Dur als
+\enquote{capable, die schönsten Sentiments von der Welt zu
+exprimieren, es sey nun Großmuth\,/\,Standthafftigkeit\,/\,Liebe…}
+beschreibt.  Jesus ist also vom missgünstigen Eifer der Jünger ganz
+unbeeindruckt – oder vielmehr: dem barocken Zuhörer wird die
+Großherzigkeit von Jesu Handeln vor Augen geführt –, und der
+liebevolle Charakter bleibt auch im folgenden g-moll erhalten,
+nun eingetrübt: laut Mattheson hat dieses eine \enquote{ziemliche
+Ernsthafftigkeit mit einer muntern Lieblichkeit vermischet} und
+ist zu \enquote{zärtliche[m]} sowie \enquote{beydes zu mäßigen
+Klagen und temperirter Frölichkeit bequem}.
+
+In den weiteren Takten lässt sich diese genaue Übereinstimmung
+mit dem Tonartencharakter nicht beobachten, zum einen weil d-, a-,
+e-moll darin weniger klar sind, zum anderen ist für Bach sicher
+die Überleitung zum h-/fis-moll des folgenden Rezitativs/der Arie
+Anlass genug.
+
+Die Universalität der künftigen Verbreitung des Evangeliums
+wird durch den Spitzenton e hervorgehoben.
+
+\subsubsection*{\Nr{9c.} \enquote{Gehet hin in die Stadt zu einem}}
+Die Rede Jesu beginnt sowohl melodisch wie harmonisch mit
+den typischen Modellen, und auch in der verschachtelten wörtlichen
+Rede (\enquote{sprecht zu ihm: \enquote{Der Meister lässt dir sagen:
+\enquote{Meine Zeit ist hier}}}) wird jeder Beginn durch die
+Dreiklangsmodelle markiert.  Durch das G-~und D-Dur ist die Stelle
+heiter geprägt.
+
+\subsubsection*{
+\enquote{Wahrlich, ich sage euch: Einer unter euch wird mich verraten}
+}
+Der Evangelist moduliert ziemlich schnell nach Es-Dur, um die
+folgende Prophezeiung vorzubereiten, welche sich dann nach c-moll
+wendet.  Dieses beschreibt Mattheson als \enquote{überaus lieblich
+dabey auch trist}, und in der Tat sehen wir auch in den weichen
+Intervallen und Melodiebildungen, mit den Seufzern der ersten Geige,
+dass Bach die Worte keineswegs als drohend interpretiert. Zugleich
+finden wir die kleinen Septimen der Singstimme bei Kirnberger\cite[S.~104]{kirnberger}
+als \enquote{etwas fürchterlich} charakterisiert – auch das passt
+hier sehr gut.
+
+\subsubsection*{\Nr{11} \enquote{Der mit der Hand mit mir in die Schüssel tauchet}}
+Dieses Wort ist nicht, wie einige zuvor, in den Instrumenten durch
+rhetorische Figuren geschmückt; sein Ausdruck rührt von einigen
+\enquote{falschen} (d.i. verminderten und übermäßigen) Intervallen
+in der Singstimme sowie vor allem von der herrschenden Tonart f-moll
+her.  Mattheson beschreibt sie mit vielen und starken Worten:
+\enquote{F.~moll. scheinet eine gelinde und gelassene / wiewol dabey
+tieffe und schwere / mit etwas Verzweiflung vergesellschaffte /
+tödliche Hertzens-Angst vorzustellen / und ist über die massen
+beweglich.  Er drücket eine schwartze / hülflose Melancholie\footnote{War
+sich Mattheson wohl der Tautologie in \enquote{schwartze Melancholie}
+bewusst?} schön aus / und will dem Zuhörer bisweilen ein Grauen oder
+einen Schauder verursachen.}
+
+Wir haben oben bereits erwähnt, dass dieses \enquote{Wehe} wiederum
+keine persönliche Drohung ist, und finden dies durch die weniger
+harte als empfindsame Charakterisierung der Tonart bestätigt.  Die
+\enquote{tödliche Hertzens-Angst} ist an dieser Stelle erneut weniger
+Jesu eigene Äußerung als die Reaktion des barocken Interpreten.  Wir
+sehen also, dass es in der Darstellung Jesu nicht primär um eine
+psy\-cho\-lo\-gisch-dra\-ma\-tisch stimmige, \enquote{realistische}
+Darstellung, sondern um die Anregung des Zuhörers zu einer emotionalen
+Reaktion geht, wie dies auch Rolf Dammann beschreibt\cite[S.~224\,ff.]{dammann}.
+
+\subsubsection*{\enquote{Du sagests.}}
+Lapidar und knapp ist die folgende Antwort Jesu, nun aber wieder von
+den Streichern rhetorisch untermalt durch eine fallende Seufzerkette
+in g-moll über Orgelpunkt.  Wiederum ist der Affekt also klagend,
+bereits etwas gemildert in der Tonartenwahl.
+
+\subsubsection*{
+\enquote{Nehmet, esset, das ist mein Leib.} \\
+\enquote{Trinket alle daraus}
+}
+Vom C-Dur schreibt Mattheson, dass es trotz seiner \enquote{rude[n]
+und freche[n] Eigenschaft} von einem \enquote{habile[n] Componist […]
+auch in tendren Fällen} angebracht werden kann.  Im gegenwärtigen Fall
+wird uns die Musik zunächst in F-Dur bekannt gemacht und dann nach C
+versetzt; die Streicherbegleitung, der anmutige 6/4-Takt und die sehr
+lineare, fließende Bewegung tragen ebenfalls dazu bei, dass keineswegs
+ein \enquote{frecher} Eindruck entsteht; im Gegenteil ist die Heiterkeit
+dieser Stelle, die sich in der nachfolgenden Arie fortsetzt, fast ohne
+Parallele im gesamten Werk.\footnote{Auch die Arien \enquote{Sehet,
+Jesus hat die Hand} und \enquote{Mache dich, mein Herze rein} sind
+zumindest viel gedeckter gehalten in Tonarten und Instrumentation.}
+
+Bemerkenswert am zweiten, längeren Arioso ist die sehr kontinuierliche
+Bewegung; mit Ausnahme von T.~26 wird das Stück von nahezu durchgehenden
+Achteln weitergetragen, und auch die große textliche Zäsur zu V.~29
+in T.~31 wird durch die Begleitstimmen überbrückt.  Auch die vielen
+Überbindungen, manche Synkopen und hemiolische Bildungen tragen zu
+diesem großen Bogen bei, und vielleicht sehen wir darin eine
+Veranschaulichung des zukunftsweisenden Charakters dieser Handlung:
+hier wird etwas begonnen, das über die Kreuzigung hinaus durch alle
+Zeiten Bestand hat.
+
+\subsubsection*{\Nr{14} \enquote{In dieser Nacht}}
+Nur an wenigen Stellen bietet der Passionsbericht Matthäi Anlass zu
+echt hypotypotischen Figuren.  Neben den \enquote{Wolken des Himmels}
+(Mt.~26,\,64, Nr.~36a.), dem Zerreißen des Vorhangs im Tempel und dem
+Erdbeben treten sie vor allem hier in Nr.~14 gehäuft auf: der Weg
+hinauf zum Ölberg wird durch die Tonleiter des Violoncellos in T.~2
+gemalt; die zerstreuten Schafe im \textit{vivace} T.~8\,f.; und die
+Auferstehung – \textit{moderato} – in den Geigen im Auftakt
+zu 12 wie auch in der steigenden Gesangslinie.  Vielleicht ist es
+dabei nicht übertrieben, die stac\-ca\-to-Ach\-tel am Ende als
+Schritte zu verstehen.
+
+Hingegen die Seufzer T.~6 und die verminderten Quinten der Singstimme
+zuvor sind Ausdruck derselben \enquote{großen Betrübniß}\cite[S.~251]{mattheson},
+die bereits in der Tonart fis-moll steckt.
+
+\subsubsection*{\Nr{16} \enquote{Wahrlich, ich sage dir: In dieser Nacht}}
+Diese Prophezeiung bewegt sich mit dem hauptsächlichen e-moll bereits
+weiter in den Kreuzen als die vorherigen; doch auch diesem wird von
+Mattheson keine Härte, sondern ein \enquote{tieffdenckend[er],
+betrübt[er]} Affekt beigelegt.  Mit den Tonwiederholungen auf
+\enquote{\underline{ehe der Hahn}} und den Sprüngen steckt zwar in
+der Deklamation großer Nachdruck, aber auch hier \emph{verkündet}
+Jesus eine Wahrheit, anstatt sie Petro etwa vorzuhalten.  Und
+wiederum sind \enquote{falsche} Intervalle mehr dem Publikum zur
+Verdeutlichung als zur psychologischen Interpretation der Handlung
+bestimmt.
+
+\subsubsection*{\Nr{18} \enquote{Setzet euch hie}}
+Im zweiten Teil von Händel’s Messias können wir einen markanten
+Gebrauch tonartlicher Extreme an dramaturgischen Schlüsselstellen
+beobachten: dem b-moll zu Beginn von Nr.~24 (\foreignquote{english}
+{All they, that see him, laugh him to scorn}) wird nach kurzer Zeit
+das A-Dur von Nr.~29 \foreignquote{english}{But Thou didst not leave
+His soul in hell} gegenübergestellt.  Ähnlich arbeitet Bach in der
+Gethsemane-Szene der Matthäuspassion: Nr.~18, T.~9\,ff. sowie das
+folgende Recitativo con Coro Nr.~19 sind in f-moll gehalten,
+dann steigt die Tonalität dramatisch bis zum gis-moll (mit
+doppeldominantischem cisis!\footnote{Wir können nur mutmaßen, wie
+ein Sänger zu Bach’s Zeit auf eine solche Ungeheuerlichkeit reagiert
+haben mag…}) in Nr.~26, T.~14–16 (\enquote{Siehe, er ist da, der
+mich verrät!}).
+
+Doch wir greifen voraus; zu Beginn der Szene wird noch eine große Ruhe
+verströmt.  Sie äußert sich in der tiefen Lage, den Haltetönen und dem
+langsamen Sprachrhythmus, der auf dem Wort \enquote{\underline{be}te}
+ganz aufgehoben wird.  Wiederum ist es am Versende, dass Bach in den
+Streicherstimmen selbständige, expressive Figuren einführt.
+
+Nach dieser Stelle wird zum ersten Mal deutlich eine Gefühlsregung
+Jesu geschildert, zunächst durch den Evangelisten mit den Worten
+\enquote{und fing an zu trauern und zu zagen}, von Bach durch
+Auflösung der syllabischen Diktion, Vorhalte, das neapolitanische
+ges und verminderte Intervalle veranschaulicht.
+
+\subsubsection*{\enquote{Meine Seele ist betrübt}}
+Wie bereits erwähnt, ist dieses nächste Wort als Arioso komponiert.  Die
+\enquote{Bebung} in den Streichern ist bereits starkes Ausdrucksmittel
+für die innerliche Regung Jesu.  In der Singstimme werden die Wörter
+\enquote{be\underline{trübt}}\footnote{Der verminderte Akkord in tiefer,
+enger Lage taugt durchaus auch als Hypotypose für \enquote{trüb}.} und
+\enquote{Tod} durch lange Haltetöne hervorgehoben; letzteres auch durch
+die bildhaft sehr tiefe Lage.  Die Aufforderung \enquote{bleibet hie
+und wachet mit mir!} wird stark kontrastiert durch plötzlich hohe Lage
+und wieder rezitativischen Gestus; man könnte daher meinen, die ariosen
+Worte zuvor seien mehr nach innen gerichtet.  Doch das wäre zu sehr
+veristisch gedacht: die klar unterschiedene Darstellung hebt für den
+Zuhörer das Relief hervor, ohne dass der innere Zusammenhang der
+Satzhälften dadurch berührt wäre.
+
+\subsubsection*{\Nr{21} \enquote{Mein Vater, ists möglich}}
+In der Einleitung des Evangelisten sehen wir wie in Nr.~18 das Wort
+\enquote{beten} aus dem rezitativischen Fluss herausgenommen und durch
+eine ariose Figur in der Begleitung ausgestaltet.  Jesu folgende Worte
+erhalten großen Nachdruck durch die hohe Lage und die prominente
+synkopische Viertel auf \enquote{\underline{son}dern wie du willt}.  Die
+Zweiteilung in die Bitte um Verschonung und die Hingabe in Gottes Willen
+ist musikalisch umgesetzt, indem sich die erste Hälfte melodisch und
+harmonisch (nach B-Dur) öffnet, während die zweite den melodischen
+Bogen abwärts zu Ende führt und in g-moll schließt.
+
+\subsubsection*{\Nr{24} \enquote{Könnet ihr denn nicht eine Stunde mit mir wachen?}}
+Eine erneute eindringliche Aufforderung ist wiederum mit dem Spitzenton
+es$'$ dargestellt, während bei \enquote{in Anfechtung fallet} die Linie
+hypotypotisch fällt.  Die sentenzhafte Moral \enquote{Der Geist
+ist willig, aber das Fleisch ist schwach} erhält rhetorisches Gewicht
+durch die lange Pause vorher und auch die Pointe wird durch eine Pause
+verdeutlicht, wie auch durch den Trugschluss aus aufeinanderfolgenden
+Septakkorden, welche die Schwäche eindrücklich umsetzen, verstärkt durch
+den Seufzer in der Kadenz.
+
+\subsubsection*{\enquote{Mein Vater, ists nicht möglich}}
+Für diese wiederholte Bitte übernimmt Bach die melodische Form aus
+Nr.~21, aber enorm gesteigert durch die Versetzung von Es-Dur/B-Dur
+nach e-moll/h-moll.  Außerdem wird der Bruch in der Mitte vergrößert,
+indem nun das \enquote{ich trinke ihn denn} aus tiefer Lage neu anhebt
+und so die Bitterkeit des Kelches spürbar macht.
+
+\subsubsection*{\Nr{26} \enquote{Ach, wollt ihr nun schlafen und ruhen? Siehe…}}
+Auch bei diesem Wort ist die im Text angelegte Steigerung zum vorherigen
+musikalisch wirkungsvoll übersetzt: der Ausruf \enquote{Ach!} setzt
+unvermittelt und sehr dissonant ein, der rhetorische Gestus ist von
+vielen Sechzehnteln und Pausen durchsetzt.  Gemeinsam mit der Harmonik,
+die immer noch eine Quinte ansteigt, und der beängstigenden Figur der
+ersten Geige in T.~9 wird so die Zuspitzung der Dramatik deutlich.
+
+\subsubsection*{\enquote{Mein Freund, warum bist du kommen?}}
+In denkbar starkem Kontrast dazu steht diese Anrede Jesu an Judas. Die
+Streicherbegleitung besteht lediglich aus einem gehaltenen Akkord,
+kein Harmoniewechsel findet statt, und das D-Dur hat nach dem vorigen
+Geschehen ebenfalls eine eindeutig friedfertige Wirkung.  Die Anrede
+\enquote{Mein Freund} ist melismatisch geschmückt und der obligate
+Quartvorhalt bekommt sehr viel Zeit.  Bach verstärkt also die oben
+beschriebene Deutung Luther’s, nach der in diesem Wort keinerlei
+Vorwurf oder Kritik steckt, und der dramaturgische Effekt ist ohne
+Zweifel bestechend, indem am Höhepunkt der Dramatik kurz die Zeit
+still steht.
+
+\subsubsection*{\Nr{28} \enquote{Stecke dein Schwert an seinen Ort}}
+Nach dem großen Lamento und Aufruhr der Nr.~27 will die Handlung in
+hohem Tempo weitergehen: mit vielen Sechzehnteln schildert der
+Evangelist, wie Petrus dem Malchus\footnote{Beide sind im Matthäusevangelium
+nicht mit Namen genannt.} ein Ohr abhaut.  Mit den Worten \enquote{Da
+sprach Jesus zu ihm:} verlangsamt Bach das Tempo auf die Hälfte\footnote{Beweis,
+wie wichtig es ist, im Rezitativ die Notenwerte genau zu lesen.}
+und stellt so drastisch das Innehalten dar.  Die folgende \enquote*{Strafandrohung}
+für die Gewalt erhält großen Nachdruck durch melodische Steigerung und
+nach wie vor gedämpftes Tempo; hier verschiebt Bach sogar den textlichen
+Schwerpunkt gegen den Takt auf die 2 von T.~8, um den Worten das rechte
+Gewicht zu verleihen.  Erneut wird zwischen die Verse ein kleines
+\enquote{Zwischenspiel} der Streicher gefügt.
+
+Zwischen der Möglichkeit, von \enquote{mehr denn zwölf Legion Engel}
+gerettet zu werden, und dem vorgezeichneten Weg ans Kreuz ergibt sich
+ein wirksamer Kontrast, den Bach umsetzt, indem sich Vers~53 in hoher
+Lage der Singstimme nach einem strahlenden A-Dur wendet, und dann in
+der großen Zäsur nach fis-moll und in tiefere Lage fällt.  Besonders
+frappierend ist nach dem fragenden Halbschluss, dass \enquote{es muß
+also gehen.} nicht etwa trotzig, oder entschlussfreudig, sondern mit
+der Bitterkeit eines verminderten Septakkords ausgesprochen wird.
+
+\subsubsection*{\enquote{Ihr seid ausgegangen}}
+Dies war zu den Jüngern gesprochen; direkt darauf wendet sich Jesus
+an die Schar, die \enquote{ausgegangen} ist, ihn \enquote{zu fahen}.  Die
+großen Sprünge und hohen Spitzentöne könnten emotionaler Ausdruck eines
+Jesu sein, der in großer Aufregung spricht; eher aber entspricht es
+der barocken Konzeption, dass hiermit wiederum primär dem Publikum die
+Unerhörtheit der Ereignisse verdeutlicht wird.  Bei dieser Rede ist
+der Kontrast fast umgekehrt gestaltet als bei der vorherigen an die
+Jünger: der erste Teil ist in Moll gehalten, der zweite wendet sich
+bei viel weicherer Melodik nach A-Dur und zeigt ein ganz anderes
+Sich-fügen in das vorgeschriebene Schicksal.  Auch hier fallen wiederum
+die Pausen auf in T.~26\,f., die eine Beruhigung darstellen.  Vielleicht
+desto weniger können die Jünger mit dieser \enquote{zufriedenen} Art
+der Schicksalsergebenheit umgehen und ergreifen sämtlich die Flucht.
+
+\subsubsection*{\Nr{36a.} \enquote{Du sagests. … Von nun an wirds geschehen}}
+Der zweite Teil der Passion sieht Jesus nicht mehr als Akteur der
+Handlung; was Henrici mit dem Oxymoron \enquote{verdienstlich Leiden}
+(Nr.~20, T.~48\,ff.) benennt, besteht nun darin, dass Jesus den falschen
+Vorwürfen nichts entgegensetzt.
+
+Jesu Schweigen ist musikalisch an zwei Stellen besonders prägnant umgesetzt:
+in Nr.~33, T.~16\,f. folgt auf die Frage des Pontifex zunächst eine sehr
+beredte Viertelpause (die Interpreten tunlichst nicht übergehen sollten)
+und beim Wort \enquote{schwieg \underline{stille}} endet der Evangelist
+in sehr tiefer Lage und damit entsprechend leise.  Noch deutlicher ist
+dies in Nr.~43, T.~24 bei \enquote{antwortete er \underline{nichts}}.
+
+Als Jesus in der Anhörung sein Schweigen zum ersten Mal bricht, folgt
+auf die Bestätigung, dass er Christus und Gottes Sohn sei, die
+Prophezeiung über seine Himmelfahrt.  Musikalisch leitet Bach Jesu
+Antwort mit einem besonderen Einfall ein: eine (kurze) Quintfallsequenz
+von leitereigenen Septakkorden verbindet die Worte des Evangelisten
+mit denen Jesu.
+
+Wir hatten oben beschrieben, dass das prophetische Wort hier im Grunde
+aus der Logik der Handlung herausgelöst ist; Bach aber stellt es durch
+den lange gehaltenen Akkord der Streicher mehr als folgerichtige
+Erläuterung des Gesagten dar.  Weithin bewegt sich dieses Wort in
+e-moll, was mit Mattheson’s Charakterisierung dieses Tones schwer in
+Einklang zu bringen ist; weniger als Betrübnis und Nachdenken scheint
+es hier eine gewisse entrückte Majestät darzustellen.
+
+Dass die Sechzehntel der Geigen, später auch von der Singstimme
+übernommen, mit ihren Bögen bildhaft die Wolken zeichnen (mehr
+Augenmusik als beim Hören deutlich), haben wir oben bereits
+erwähnt.  Vielleicht wollte Bach auch durch das hohe dis und
+den großen Sprung bei \enquote{\underline{se}hen} andeuten, dass
+es kein gewöhnliches Sehen, kein irdischer Anblick ist, von dem
+Jesus hier spricht.
+
+\subsubsection*{\Nr{43} \enquote{Du sagests.}}
+Als Jesus zum zweiten Mal vor dem Gericht die Stimme erhebt, ist es
+tatsächlich nur zu diesem lapidaren \enquote{Du sagests}, das auch
+von den Streichern nur mit drei knappen Akkorden gerahmt wird.
+
+\subsubsection*{\Nr{61a.} \enquote{Eli, Eli, lama asabthani?}}
+\enquote{Und um die neunte Stunde schrie Jesus laut}: Aus der Tiefe
+ruft Jesus, aber laut; in b-moll ruft er, dessen extreme Eigenschaft
+Mattheson sich gar nicht zu beschreiben anschickt, aber in hoher Lage;
+verlassen von der Streicherbegleitung, als musikalische Realisierung
+des \textit{status exinanitionis}, aber harmonisiert zeitweise mit
+einem Stapel von vier dissonierenden Figuren. – Zutat Bach’s in der
+Vertonung ist die Wiederholung des \enquote{lama?}, warum?; dies
+zunächst als rhetorische Steigerung, aber auch, damit der Kunstgriff
+der Übersetzung mit den gleichen Noten aufgeht.  Diese getreue
+Übersetzung gibt der Evangelist dem Hörer, in seine Lage transponiert,
+zugleich aber tonartlich noch tiefer herabgesunken in es-moll.
+
+Zuletzt der Schrei Jesu in Nr.~61e. wird lediglich durch den Evangelisten
+berichtet, mit einer klassischen exclamatio in der Sexte, und als
+Dissonanz, die nur heteroleptisch durch die Orgel aufgelöst wird.
+
+\section{Summa}
+
+Wenn wir in dieser Form beobachten, wie Bach’s dramatische Konzeption
+weniger von einer authentischen, modern-schauspielerischen Aktionsform
+der Sänger, sondern von einer handwerklich gegründeten, \emph{mittelbaren}
+\enquote{Expressivität} ausgeht, so ist das für die moderne Aufführungspraxis
+sowohl ein Problem als auch eine Lösung.  Ein Problem deshalb, weil
+weder die Gewohnheiten des Publikums noch die der Sänger mit einer
+solchen Darstellungsweise rechnen – inzwischen kann man ja von
+Aufführungen mit beispielsweise rekonstruierter barocker Gestik berichten,
+die mit Sicherheit das Befremden beim Publikum erhöhen –; zugleich aber
+eine Lösung, da eine authentische Darstellung Jesu immer als Extremfall
+vor Augen führt, wie unrealistisch oder in diesem Fall eindeutig anmaßend
+so ein Ideal doch ist.  Gerade bei einer Passion sind solche Überlegungen
+notwendig.
+
+Außerdem ist es hilfreich, auf diese Weise Bach ein wenig (weiter)
+vom Sockel des \enquote{fünften Evangelisten} (Nathan
+Söderblom\cite[S.~226]{thunberg}) herunterzuholen, und so letztlich einem
+Verständnis näherzukommen.  Denn einerseits müssen wir damit umgehen,
+dass Bach auch einem Umfeld entstammt, das unserem ziemlich fern ist,
+und für ein völlig anderes Publikum schreibt; aber indem wir Bach’s
+Sichtweise derart relativieren, sind wir zugleich herausgefordert, unser
+eigenes Verhältnis zum Geschehen zu reflektieren, neu über Jesu Passion
+nachzudenken, und so entfaltet sich eine neue Aktualität dieses Denkmals
+unserer musikalischen Tradition.
+
+\printbibliography
+
+\end{document}
