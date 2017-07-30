@@ -3,7 +3,9 @@
 2017 habe ich zwei Hausarbeiten geschrieben.  Als langjährigen Nutzer
 von LilyPond und Ubuntu stand für mich dabei fest, dass ich dabei
 XeLaTeX nutzen wollte, und so habe ich mich damit vertraut gemacht
-und bin mit den Ergebnissen sehr zufrieden.  Als Hilfe für andere,
+und bin glücklich, dass es mit diesen hervorragenden Werkzeugen oft
+sehr einfach war, Probleme zu lösen und tolle Ergebnisse zu erzielen.
+Aus Dankbarkeit dafür, als Hilfe für andere,
 die ähnliches unternehmen wollen, und weil ich mein Teil für die
 freie Verfügbarkeit der Ergebnisse wissenschaftlicher Tätigkeit an
 öffentlichen Universitäten tun möchte, stelle ich nun den Quellcode
