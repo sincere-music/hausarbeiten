@@ -1,0 +1,115 @@
+\documentclass[a4paper,11pt,twoside]{scrartcl}
+
+\usepackage{verbatim}
+\usepackage[quiet]{polyglossia}
+\usepackage[autostyle,german=guillemets,french=guillemets]{csquotes}
+\usepackage{fontspec}
+\usepackage{lilyglyphs}
+\usepackage[
+	backend=biber,
+	style=footnote-dw,
+%% biblatex-dw-Optionen %%%
+%	acronyms=true,
+%	addyear=true,
+	annotation=true,
+%	citeauthor=normalfont,%namefontfoot,%namefont,
+%	citedas=false,
+%	citepages=suppress,%omit,%permit,%separate,
+%	edbyidem=false,
+%	editorstring=normal,%brackets,
+%	edstringincitations=false,
+%	edsuper=true,
+%	firstfull=true,
+%	firstfullname=true,
+%	firstnamefont=smallcaps,%italic,%bold,
+%	ibidemfont=smallcaps,%italic,%bold,
+%	idembib=false,
+%	idembibformat=dash,
+%	idemfont=smallcaps,%italic,%bold,
+%	inreference=full,%normal,
+%	journalnumber=afteryear,%date,%standard
+	library=true,
+%	namefont=smallcaps,%italic,%bold,
+%	nolocation=true,
+%	nopublisher=false,
+%	oldauthor=false,
+%	omiteditor=true,
+%	origfields=false,
+%	origfieldsformat=parens,%brackets,%punct,
+%	pagetotal=true,
+%	pseudoauthor=false,
+%	series=afteryear,
+%	shorthandibid=false,
+%	shorthandinbib=true,
+%	shorthandwidth=40pt,%3em,
+%	shortjournal=true,
+%	terselos=false,
+%	xref=true,
+%% biblatex-Optionen %%%
+%	autocite=plain,
+%	citetracker=false,
+%	doi=true,
+%	eprint=true,
+%	ibidpage=true,
+%	ibidtracker=false,
+%	idemtracker=false,
+%	isbn=true,
+%	pagetracker=false,
+	hyperref
+]{biblatex}
+\usepackage[hidelinks]{hyperref}
+\usepackage[verbose=silent]{microtype}
+
+%% Notenbeispiel-Setup %%%%%%%%%%%%%%%%%
+\usepackage{float}
+\newfloat{notenbeispiel}{ht}{nbs}
+\floatname{notenbeispiel}{Notenbeispiel}
+% für Verzeichnis: \listof{}
+
+%% bessere Querverweise %%%%%%%%%%%%%%%%
+\usepackage{varioref}
+% siehe Packetdoku S. 14
+\def\reftextfaceafter {auf der \reftextvario
+{gegenüberliegenden}{gegenüberliegenden} Seite}%
+\def\reftextfacebefore {auf der \reftextvario
+{gegenüberliegenden}{gegenüberliegenden} Seite}%
+\def\reftextafter
+{auf der \reftextvario
+{n\"achsten}{folgenden} Seite}%
+\def\reftextbefore
+{auf der \reftextvario
+{vorigen}{vorhergehenden} Seite}%
+\def\reftextcurrent
+{\reftextvario
+{auf dieser}{diese} Seite}%
+
+%% Formatierung Tonartangaben %%%%%%%%%%
+\newcommand{\tonart}[1]{\mbox{#1}}
+
+\bibliography{quellen}
+
+\setdefaultlanguage{german}
+\setotherlanguage[variant=british]{english}
+\setotherlanguage{french}
+
+\author{Simon Albrecht}
+\title{Alles gesagt?}
+\subtitle{Zu Beethoven’s Streichquartett op. 59/1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+
+\input{section--Einleitung}
+\input{section--1-Allegro}
+\input{section--2-Allegretto}
+\input{section--3-Adagio}
+\input{section--4-Allegro}
+\input{section--Summa}
+
+\printbibliography
+
+\end{document}
