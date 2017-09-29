@@ -1,7 +1,7 @@
-# Hausarbeiten als LaTeX-Quellcode
+# Wissenschaftliche Arbeiten als LaTeX-Quellcode
 
-2017 habe ich zwei Hausarbeiten geschrieben.  Als langjährigen Nutzer
-von LilyPond und Ubuntu stand für mich dabei fest, dass ich dabei
+2017 habe ich zwei Hausarbeiten und eine Bachelorarbeit geschrieben.  Als
+langjährigen Nutzer von LilyPond und Ubuntu stand für mich fest, dass ich dabei
 XeLaTeX nutzen wollte, und so habe ich mich damit vertraut gemacht
 und bin glücklich, dass es mit diesen hervorragenden Werkzeugen oft
 sehr einfach war, Probleme zu lösen und tolle Ergebnisse zu erzielen.
@@ -32,6 +32,7 @@ cd nbs
 lilypond 1-motivik.ly 2-var-d-moll.ly 3-parallelen-zu-op-61.ly
 cd ..
 ```
+Entsprechendes gilt für die Bachelorarbeit.
 
 ## Danksagung
 
