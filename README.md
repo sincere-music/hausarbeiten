@@ -3,8 +3,8 @@
 2017 habe ich zwei Hausarbeiten und eine Bachelorarbeit geschrieben.  Als
 langjährigen Nutzer von LilyPond und Ubuntu stand für mich fest, dass ich dabei
 XeLaTeX nutzen wollte, und so habe ich mich damit vertraut gemacht
-und bin glücklich, dass es mit diesen hervorragenden Werkzeugen oft
-sehr einfach war, Probleme zu lösen und tolle Ergebnisse zu erzielen.
+und bin glücklich, dass es mit diesen hervorragenden Werkzeugen gut
+möglich und angenehm war, Probleme zu lösen und tolle Ergebnisse zu erzielen.
 Aus Dankbarkeit dafür, als Hilfe für andere,
 die ähnliches unternehmen wollen, und weil ich mein Teil für die
 freie Verfügbarkeit der Ergebnisse wissenschaftlicher Tätigkeit an
